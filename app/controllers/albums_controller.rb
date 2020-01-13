@@ -37,7 +37,6 @@ class AlbumsController < ApplicationController
         render :show
       end
 
-  def update
     # Code for updating an album goes here.
     def update
       @album= Album.find(params[:id])
@@ -59,4 +58,3 @@ class AlbumsController < ApplicationController
       ##This is the template "params.require(:<name-of-class>).permit(:<name-of-parameters-to-accept-separated-by-commas)""
     end
   end
-end
