@@ -18,7 +18,8 @@ class AlbumsController < ApplicationController
   def create
     @album = Album.new(album_params)
     if @album.save
-      redirect_to albums_path
+      flash[:notice] = "Album successfully added!"
+    redirect_to albums_path
     else
       render :new
     end
@@ -50,6 +51,7 @@ class AlbumsController < ApplicationController
   def destroy
     # Code for deleting an album goes here.
   end
+
 
 ##It's important that we include this code at the end of the class (just above the final end); we wouldn't want to accidentally make any of our controller actions private.
   private
